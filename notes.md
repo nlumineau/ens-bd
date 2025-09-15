@@ -2,6 +2,7 @@
 
 ```sh
 git clone https://github.com/nlumineau/ens-bd.git
+rm -rf ens-bd/.git
 ```
 
 
@@ -12,7 +13,7 @@ docker run --rm -it --name postgres \
     -e POSTGRES_USER=postgres \
     -e POSTGRES_PASSWORD=postgres \
     -e PGDATA=/data \
-    -v $(pwd)/data/db-data:/db-data.sql \
+    -v $(pwd)/data/db-data.sql \
     -v $(pwd)/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh \
     postgres:17.5
 
