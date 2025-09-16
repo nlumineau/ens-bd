@@ -10,4 +10,4 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
 EOSQL
 
 
-psql -v ON_ERROR_STOP=0 -d "$TP_DB" -a -U etu -f ./data/cinema/db-data.sql
+psql -v ON_ERROR_STOP=0 -d "$TP_DB" -a -U etu -f cinema/db-data.sql
