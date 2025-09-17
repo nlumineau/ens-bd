@@ -13,7 +13,7 @@ docker run --rm -it --name postgres \
     -e POSTGRES_USER=postgres \
     -e POSTGRES_PASSWORD=postgres \
     -e PGDATA=/data \
-    -v $(pwd)/data/db-data.sql \
+    -v $(pwd)/data/cinema:/db-data.sql \
     -v $(pwd)/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh \
     postgres:17.5
 
